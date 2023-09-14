@@ -15,12 +15,15 @@ spec:
     targetRevision: HEAD
   syncPolicy:
     automated: {}
+    syncOptions:
+      #    - RespectIgnoreDifferences=true
+    - Prune=true
   ignoreDifferences:
-     - group: apiextensions.k8s.io
-       name: trafficsplits.split.smi-spec.io
-       kind: CustomResourceDefinition
+     - group: apps
+       namespace: sparkpi
+       kind: Pod
        jsonPointers:
-         - /spec/preserveUnknownFields
+         - /metadata
      - group: apiextensions.k8s.io
        name: trafficsplits.split.smi-spec.io
        kind: CustomResourceDefinition
