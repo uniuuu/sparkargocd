@@ -10,7 +10,7 @@ spec:
     #  image: "localhost:32000/spark-operator/spark:v3.1.1"
   image: uniuuu/sparkapp:0.0.11
   imagePullPolicy: Always
-  mainClass: org.apache.spark.examples.SparkPi
+    #  mainClass: org.apache.spark.examples.SparkPi
     #  mainApplicationFile: "local:///opt/spark/examples/jars/spark-examples_2.12-3.1.1.jar"
   mainApplicationFile: "local:///opt/spark/jars/spark-eks-assembly-3.1.2.jar"
     #  sparkVersion: "3.1.1"
