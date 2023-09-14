@@ -54,6 +54,8 @@ RUN sbt clean assembly
 # Use your own Spark base image built for AWS compatiblity here
 FROM vgkowski/spark:v3.1.2 AS final
 
+ENV SPARKAPP_VERSION=0.0.12
+
 COPY --from=build /opt/input/target/scala-2.12/spark-eks-assembly-3.1.2.jar  /opt/spark/jars
 
 ENV SPARK_HOME /opt/spark

@@ -9,14 +9,10 @@ spec:
   mode: cluster
     #  image: "localhost:32000/spark-operator/spark:v3.1.1"
   image: uniuuu/sparkapp:0.0.11
-    #image: localhost:32000/spark-on-uk8s-on-core-20:1.0
   imagePullPolicy: Always
   mainClass: org.apache.spark.examples.SparkPi
     #  mainApplicationFile: "local:///opt/spark/examples/jars/spark-examples_2.12-3.1.1.jar"
   mainApplicationFile: "local:///opt/spark/examples/jars/spark-examples_2.12-3.1.2.jar"
-    #  mainApplicationFile: "local:///opt/spark/jars/spark-eks-assembly-3.1.2.jar"
-    #  mainApplicationFile: "local:///opt/spark/jars/spark-core_2.12-3.1.2.jar"
-    #  mainApplicationFile: "local:///opt/spark/jars/spark-unsafe_2.12-3.1.2.jar"
     #  sparkVersion: "3.1.1"
   sparkVersion: "3.1.2"
   restartPolicy:
