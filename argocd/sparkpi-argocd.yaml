@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sparkpi
+  name: sparkapp
   namespace: argocd
 spec:
   destination:
-    namespace: sparkpi
+    namespace: sparkapp
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: sparkpi
+    path: sparkapp
     repoURL: https://github.com/uniuuu/sparkargocd.git
 #    targetRevision: 0.0.1
     targetRevision: HEAD
@@ -20,15 +20,15 @@ spec:
       replace: true
         #      selfHeal: true
       RespectIgnoreDifferences: true
-  ignoreDifferences:
-     - group: apps
-       namespace: sparkpi
-       kind: Pod
-       jsonPointers:
-         - /metadata
-     - group: apiextensions.k8s.io
-       name: trafficsplits.split.smi-spec.io
-       kind: CustomResourceDefinition
-       jsonPointers:
-         - /spec/preserveUnknownFields
+        #  ignoreDifferences:
+        #     - group: apps
+        #       namespace: sparkapp
+        #       kind: Pod
+        #       jsonPointers:
+        #         - /metadata
+        #     - group: apiextensions.k8s.io
+        #       name: trafficsplits.split.smi-spec.io
+        #       kind: CustomResourceDefinition
+        #       jsonPointers:
+        #         - /spec/preserveUnknownFields
 
