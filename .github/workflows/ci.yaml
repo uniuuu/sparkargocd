@@ -3,7 +3,7 @@ name: Spark App
 on:
   push:
     branches: [ "main" ]
-obs:
+jobs:
   build:
         needs: build
         runs-on: ubuntu-latest
