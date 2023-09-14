@@ -32,15 +32,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - uses: fregante/setup-git-user@v2
       - name: change version
         run: |
-          git config user.email ${{ secrets.EMAIL }}
-          git config user.name ${{ secrets.NAME }}
           sed -i "s+uniuuu/sparkapp.*+uniuuu/sparkapp:0.0.$RUN_NUMBER+g" sparkapp/spark-application.yaml
           git add .
           git commit -m 'Github Actions Update Image Version: ${{ github.run_number }}'
           git push origin main
         env:
-          GIT_USERNAME: ${{ secrets.GITUSERNAME }}
-          GIT_PASSWORD: ${{ secrets.GITPASSWORD }}
           RUN_NUMBER: ${{ github.run_number }}
