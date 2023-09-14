@@ -18,6 +18,7 @@ spec:
     syncOptions:
       #    - RespectIgnoreDifferences=true
     - Prune=true
+    - Replace=true
   ignoreDifferences:
      - group: apps
        namespace: sparkpi
