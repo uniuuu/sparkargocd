@@ -26,7 +26,7 @@ jobs:
               context: ./spark-application
               push: true
               tags: uniuuu/sparkapp:0.0.${{ github.run_number }}
-  modifygit:
+  newversion:
     needs: build
     runs-on: ubuntu-latest
     steps:
