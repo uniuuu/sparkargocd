@@ -14,11 +14,12 @@ spec:
 #    targetRevision: 0.0.1
     targetRevision: HEAD
   syncPolicy:
-    automated: {}
-    syncOptions:
-      #    - RespectIgnoreDifferences=true
-    - Prune=true
-    - Replace=true
+    automated:
+      prune: true
+      allowEmpty: true
+      replace: true
+      selfHeal: true
+      RespectIgnoreDifferences: true
   ignoreDifferences:
      - group: apps
        namespace: sparkpi
