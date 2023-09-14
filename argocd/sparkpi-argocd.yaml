@@ -18,7 +18,7 @@ spec:
       prune: true
       allowEmpty: true
       replace: true
-      selfHeal: true
+        #      selfHeal: true
       RespectIgnoreDifferences: true
   ignoreDifferences:
      - group: apps
