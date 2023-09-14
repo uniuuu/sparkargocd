@@ -2,6 +2,9 @@ name: Spark App
 
 on:
   push:
+    paths:
+      - .github/workflows/ci.yaml
+      - spark-application/**
     branches: [ "main" ]
 permissions:
   contents: write
