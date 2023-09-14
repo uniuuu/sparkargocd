@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: .
+    path: sparkpi
     repoURL: https://github.com/uniuuu/sparkargocd.git
 #    targetRevision: 0.0.1
     targetRevision: HEAD
