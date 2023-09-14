@@ -12,7 +12,7 @@ spec:
   mainApplicationFile: "local:///opt/spark/examples/jars/spark-examples_2.12-3.1.1.jar"
   sparkVersion: "3.1.1"
   restartPolicy:
-    type: Always
+    type: Never
   volumes:
     - name: "test-volume"
       hostPath:
