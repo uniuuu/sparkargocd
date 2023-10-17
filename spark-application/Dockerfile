@@ -1,5 +1,7 @@
 FROM openjdk:11-jdk-slim AS sbt
 
+
+ARG ver0.0.1
 # Env variables
 ENV SCALA_VERSION 2.12.14
 ENV SBT_VERSION 1.5.5
